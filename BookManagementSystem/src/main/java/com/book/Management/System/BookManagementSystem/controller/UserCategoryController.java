@@ -15,8 +15,13 @@ public class UserCategoryController {
     @Autowired
     private UserCategoryService userDetailsService;
 
+    @Autowired
+
     @GetMapping("/")
     public List<UserCategoryMaster> getAllUserCategory() {
+
+
+
         return userDetailsService.findAllUserCategory();
     }
 

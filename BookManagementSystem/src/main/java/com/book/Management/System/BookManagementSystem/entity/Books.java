@@ -1,8 +1,6 @@
 package com.book.Management.System.BookManagementSystem.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "books")
@@ -17,8 +15,13 @@ public class Books extends BaseEntity {
     @Column(name = "book_details", nullable = false)
     private String bookDetails;
 
-    @Column(name = "author_id", nullable = false)
-    private Long authorId;
+//    @OneToOne
+//    @JoinColumn(name = "user_id", nullable = false)
+//    private UserDetails userDetails;
+
+    @OneToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private UserDetails authorId;
 
     @Column(name = "author", nullable = false)
     private Long author;

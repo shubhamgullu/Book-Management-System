@@ -1,8 +1,6 @@
 package com.book.Management.System.BookManagementSystem.controller.genericCode;
 
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.exc.StreamReadException;
-import com.fasterxml.jackson.databind.DatabindException;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -30,7 +28,6 @@ public class DynamicController {
         try {
             // Get the entity class dynamically
             Class<?> entityClass = Class.forName("com.book.Management.System.BookManagementSystem.entity." + entity);
-//            Class<?> entityClass = Class.forName("com.yourpackage.model." + entity);
 
             // Create the repository dynamically
             JpaRepository repository = dynamicRepositoryService.createRepository(entityClass, Long.class);

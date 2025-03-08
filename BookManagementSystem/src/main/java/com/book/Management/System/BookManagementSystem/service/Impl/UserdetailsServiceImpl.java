@@ -55,7 +55,6 @@ public class UserdetailsServiceImpl implements UserdetailsService {
 
     private UserAddressDetails generateAddress(UserDetailsVo userDetailsVo) {
         UserAddressDetails addressDetails = new UserAddressDetails();
-
         JpaRepository cityMasterRepository = dynamicRepositoryService.createRepository(CityMaster.class, Long.class);
         addressDetails.setCity((CityMaster) cityMasterRepository.findById(userDetailsVo.getCityId()).orElse(null));
         return addressDetails;

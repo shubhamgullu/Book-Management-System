@@ -32,6 +32,10 @@ public class UserCategoryServiceImpl implements UserCategoryService {
 //        userCategoryMaster.setCategoryName(categoryName);
 //        userCategoryMaster.setStatus(true);
         //check if exist
+
+
+
+
         userCategoryMaster.setCategoryName(categoryName.trim().toUpperCase(Locale.ROOT).toUpperCase().replace(" ", "_"));
         userCategoryMaster.setUpdatedAt(LocalDateTime.now());
         userCategoryMasterRepository.save(userCategoryMaster);
