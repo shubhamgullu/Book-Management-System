@@ -25,6 +25,7 @@ public class UserCategoryController {
     @Autowired
     private DynamicRepositoryService dynamicRepositoryService;
 
+    @Autowired
 
     @GetMapping("/getUserCategory")
     public List<UserCategoryMaster> getAllUserCategory() {
