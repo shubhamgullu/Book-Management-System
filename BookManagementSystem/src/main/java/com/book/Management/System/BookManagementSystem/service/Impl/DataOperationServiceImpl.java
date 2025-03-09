@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
-public class DataOperationServiceImple implements DataOperationService {
+public class DataOperationServiceImpl implements DataOperationService {
 
     @Autowired
     private DynamicRepositoryService dynamicRepositoryService;
