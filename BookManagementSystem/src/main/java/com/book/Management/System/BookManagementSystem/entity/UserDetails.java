@@ -10,15 +10,13 @@ import java.util.Date;
 @Table(name = "user_details")
 public class UserDetails extends BaseEntity {
 
-//    @Id
-//@GeneratedValue(strategy = GenerationType.IDENTITY)
-//private Long id;
-
     @Column(name = "first_name", nullable = false)
     private String firstName;
 
     @Column(name = "last_name", nullable = false)
     private String lastName;
+    @Column(name = "middle_name")
+    private String middleName;
 
     @Column(name = "dob", nullable = false)
     private Date dob;
@@ -37,6 +35,6 @@ public class UserDetails extends BaseEntity {
     private Long phone;
 
     @ManyToOne
-    @JoinColumn(name = "address", nullable = false)
+    @JoinColumn(name = "address")
     private UserAddressDetails address;
 }

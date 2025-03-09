@@ -4,9 +4,11 @@ import com.book.Management.System.BookManagementSystem.entity.UserCategoryMaster
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface UserCategoryMasterRepository extends JpaRepository<UserCategoryMaster, Long> {
-
+    Optional<UserCategoryMaster> findByCategoryName(String name);
 //
 //    @Modifying
 //    @Query("UPDATE LrRepNumberTypeDetails rtdn set rtdn.repNumberTypeDetailStatus = :repNumberTypeDetailStatus, rtdn.primaryRep = :primaryRep, " +

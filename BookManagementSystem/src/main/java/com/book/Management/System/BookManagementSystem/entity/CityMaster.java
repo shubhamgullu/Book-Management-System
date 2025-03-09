@@ -1,15 +1,14 @@
 package com.book.Management.System.BookManagementSystem.entity;
 
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "city_master")
+@Data
 public class CityMaster extends BaseEntity {
-
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
 
     @Column(name = "city_name", nullable = false)
     private String cityName;

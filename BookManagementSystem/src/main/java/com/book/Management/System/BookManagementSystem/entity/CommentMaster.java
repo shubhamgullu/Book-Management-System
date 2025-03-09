@@ -1,13 +1,14 @@
 package com.book.Management.System.BookManagementSystem.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "comment_master")
+@Data
 public class CommentMaster extends BaseEntity {
-//    @Id
-//@GeneratedValue(strategy = GenerationType.IDENTITY)
-//private Long id;
+
 
     @ManyToOne
     @JoinColumn(name = "book_id", nullable = false)
@@ -17,10 +18,10 @@ public class CommentMaster extends BaseEntity {
     @JoinColumn(name = "user_id", nullable = false)
     private UserDetails user;
 
-    @Column(name = "ratting", nullable = false)
+    @Column(name = "ratting")
     private Long rating;
 
-    @Column(name = "comment", nullable = false)
+    @Column(name = "comment")
     private String comment;
 
 }

@@ -10,6 +10,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Locale;
 
+import static com.book.Management.System.BookManagementSystem.utils.UtilOperations.convertInputUserCategory;
+
 @Service
 public class UserCategoryServiceImpl implements UserCategoryService {
 //public class UserCategoryServiceImpl extends BaseDao implements UserCategoryService {
@@ -27,16 +29,18 @@ public class UserCategoryServiceImpl implements UserCategoryService {
 
     @Override
     public void insertUserCategoryMaster(String categoryName) {
-        UserCategoryMaster userCategoryMaster = new UserCategoryMaster();
-        //check if exist or not
-//        userCategoryMaster.setCategoryName(categoryName);
-//        userCategoryMaster.setStatus(true);
-        //check if exist
+        UserCategoryMaster userCategoryMaster = null;
 
+        String categoryNameString =convertInputUserCategory(categoryName);
+        UserCategoryMaster userCategoryMaster1 = userCategoryMasterRepository.findByCategoryName(categoryNameString).orElse(null);
 
+        if(userCategoryMaster1!=null){
+            userCategoryMaster=userCategoryMaster1;
+        }else{
+            userCategoryMaster = new UserCategoryMaster();
+            userCategoryMaster.setCategoryName(categoryNameString);
 
-
-        userCategoryMaster.setCategoryName(categoryName.trim().toUpperCase(Locale.ROOT).toUpperCase().replace(" ", "_"));
+        }
         userCategoryMaster.setUpdatedAt(LocalDateTime.now());
         userCategoryMasterRepository.save(userCategoryMaster);
     }

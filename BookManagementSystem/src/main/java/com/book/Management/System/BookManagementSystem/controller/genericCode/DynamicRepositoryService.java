@@ -142,6 +142,8 @@ public class DynamicRepositoryService {
 
             @Override
             public <S extends T, R> R findBy(Example<S> example, Function<FluentQuery.FetchableFluentQuery<S>, R> queryFunction) {
+
+
                 return null;
             }
 

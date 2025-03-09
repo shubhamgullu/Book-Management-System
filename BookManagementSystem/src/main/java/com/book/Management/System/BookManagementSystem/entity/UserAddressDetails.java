@@ -15,13 +15,13 @@ public class UserAddressDetails extends BaseEntity {
     @Column(name = "address_line_1", nullable = false)
     private String addressLine1;
 
-    @Column(name = "address_line_2", nullable = false)
+    @Column(name = "address_line_2")
     private String addressLine2;
 
     @ManyToOne
     @JoinColumn(name = "city_id", nullable = false)
     private CityMaster city;
 
-    @Column(name = "postal_code", nullable = false)
+    @Column(name = "postal_code")
     private Long postalCode;
 }

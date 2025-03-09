@@ -1,19 +1,21 @@
 package com.book.Management.System.BookManagementSystem.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
+import java.security.Permission;
 
 @Entity
 @Table(name = "users")
+@Data
 public class Users extends BaseEntity {
-//    @Id
-//@GeneratedValue(strategy = GenerationType.IDENTITY)
-//private Long id;
 
     @Column(name = "user_name", nullable = false)
     private String userName;
-
-    @Column(name = "user_type", nullable = false)
-    private Long userType;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "user_group_type", nullable = false)
+//    private PermissionMaster groupType;
 
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false)
