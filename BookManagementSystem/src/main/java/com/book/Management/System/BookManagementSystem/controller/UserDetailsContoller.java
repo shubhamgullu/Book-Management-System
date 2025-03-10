@@ -6,6 +6,7 @@ import com.book.Management.System.BookManagementSystem.service.UserdetailsServic
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@Deprecated
 @RestController
 @RequestMapping("/api/userDetails")
 public class UserDetailsContoller {

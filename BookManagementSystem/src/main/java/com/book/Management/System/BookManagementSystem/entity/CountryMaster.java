@@ -21,6 +21,11 @@ public class CountryMaster extends BaseEntity {
     @Column(name = "phone_code", nullable = false)
     @JsonProperty("phoneCode")
     private String phoneCode;
+
+
+    @Column(name = "status", nullable = false)
+    private Boolean status;
+
 //    private Long phoneCode;
 
 }

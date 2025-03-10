@@ -1,7 +1,10 @@
 package com.book.Management.System.BookManagementSystem.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "books")
 public class Books extends BaseEntity {

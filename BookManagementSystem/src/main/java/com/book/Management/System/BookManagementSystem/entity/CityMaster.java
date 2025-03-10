@@ -14,11 +14,11 @@ public class CityMaster extends BaseEntity {
     private String cityName;
 
     @ManyToOne
-    @JoinColumn(name = "countary_id", nullable = false)
-    private CountryMaster country;
+    @JoinColumn(name = "state_code", nullable = false)
+    private StateMaster stateCode;
 
     @Column(name = "status", nullable = false)
-    private Long status;
+    private Boolean status;
 
     @Column(name = "zip_code", nullable = false)
     private Long zipCode;

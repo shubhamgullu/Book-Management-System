@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class UserDetailsVo {
+public class UserDetailsVo extends BaseVo{
 
     private String firstName;
     private String LastName;
