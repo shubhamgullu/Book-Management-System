@@ -23,6 +23,12 @@ public class BaseEntity {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    @Column(name = "created_by")
+    private long createdBy;
+
+    @Column(name = "updated_by")
+    private long updatedBy;
+
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();

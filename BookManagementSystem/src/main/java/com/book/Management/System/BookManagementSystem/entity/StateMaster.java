@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Table(name = "state_master",indexes = {
         @Index(name = "stateName",columnList = "state_name"),
         @Index(name = "stateCode",columnList = "state_code"),
-        @Index(name = "state",columnList = "state_name, state_code",unique = true)
+//        @Index(name = "state",columnList = "state_name, state_code",unique = true)
 })
 
 public class StateMaster extends BaseEntity {
