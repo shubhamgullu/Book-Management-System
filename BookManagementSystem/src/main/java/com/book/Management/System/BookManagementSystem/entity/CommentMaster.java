@@ -15,7 +15,7 @@ public class CommentMaster extends BaseEntity {
     private Books book;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "commented_by", nullable = false)
     private UserDetails user;
 
     @Column(name = "ratting")
