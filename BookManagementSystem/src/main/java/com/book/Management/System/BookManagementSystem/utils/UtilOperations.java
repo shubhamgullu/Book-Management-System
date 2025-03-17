@@ -10,7 +10,7 @@ public class UtilOperations {
     public static String convertInputUserCategory(String input){
         if(input!=null)
         {
-            return input.toUpperCase(Locale.ROOT).toUpperCase().replace(" ", "_");
+            return input.toUpperCase(Locale.ROOT).replace(" ", "_").replaceAll("'/","_").toUpperCase();
         }
         return null;
     }

@@ -22,4 +22,18 @@ public class DataInsertController {
             dataInsertService.insertCountry();
     }
 
+
+    @Transactional
+    @PostMapping("/insertUsersDetails")
+    public void insertUserDetails() {
+        dataInsertService.insertUserDetails();
+    }
+
+    @Transactional
+    @PostMapping("/insertUsersCategory")
+    public void insertUsercategory() {
+        dataInsertService.insertCategory();
+    }
+
+
 }

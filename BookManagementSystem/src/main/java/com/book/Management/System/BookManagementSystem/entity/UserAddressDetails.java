@@ -8,9 +8,6 @@ import javax.persistence.*;
 @Entity
 @Table(name = "user_address_details")
 public class UserAddressDetails extends BaseEntity {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
 
     @Column(name = "address_line_1", nullable = false)
     private String addressLine1;
