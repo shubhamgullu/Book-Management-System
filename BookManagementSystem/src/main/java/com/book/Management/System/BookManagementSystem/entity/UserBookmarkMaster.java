@@ -2,9 +2,8 @@ package com.book.Management.System.BookManagementSystem.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.awt.print.Book;
 
 @Entity
 @Table(name = "user_bookmark_master")
@@ -12,18 +11,21 @@ import javax.persistence.Table;
 public class UserBookmarkMaster extends BaseEntity {
 
 
-    @Column(name = "user_id", nullable = false)
-    private Long userId;
+//    @Column(name = "user_id", nullable = false)
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private UserDetails userId;
 
-    @Column(name = "book_id", nullable = false)
-    private Long bookId;
+//    @Column(name = "book_id", nullable = false)
+    @OneToOne
+    @JoinColumn(name = "book_id")
+    private Books bookId;
 
-    @Column(name = "location_details", nullable = false)
-    private Long locationDetails;
+//    @Column(name = "location_details", nullable = false)
+    @OneToOne
+    @JoinColumn(name = "location_details")
+    private LocationMaster locationDetails;
 
     @Column(name = "comment")
     private String comment;
-
-//    @Column(name = "needtoadd_operation", nullable = false)
-//    private String needToAddOperation;
 }

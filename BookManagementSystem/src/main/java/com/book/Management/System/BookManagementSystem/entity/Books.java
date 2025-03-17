@@ -19,6 +19,8 @@ public class Books extends BaseEntity {
     @JoinColumn(name = "user_id", nullable = false)
     private UserDetails authorId;
 
-    @Column(name = "location")
-    private String location;
+    @OneToOne
+    @JoinColumn(name = "location_details")
+    private LocationMaster location;
+
 }
