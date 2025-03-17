@@ -12,6 +12,7 @@ import javax.persistence.*;
         @Index(name = "stateCode",columnList = "state_code"),
         @Index(name = "state",columnList = "state_name, state_code",unique = true)
 })
+
 public class StateMaster extends BaseEntity {
 
     @Column(name = "state_name", nullable = false)

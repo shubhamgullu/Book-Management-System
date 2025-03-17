@@ -53,7 +53,7 @@ public class UserCategoryController {
     public CountryMaster insertCountary(@RequestBody CountaryVo countaryVo) {
         JpaRepository repository = dynamicRepositoryService.createRepository(CountryMaster.class, Long.class);
         CountryMaster countryMaster = new CountryMaster();
-        countryMaster.setName(countaryVo.getName());
+        countryMaster.setCountryName(countaryVo.getName());
         countryMaster.setPhoneCode(countaryVo.getPhoneCode());
         countryMaster.setStatus(true);
         countryMaster= (CountryMaster) repository.save(countryMaster);
